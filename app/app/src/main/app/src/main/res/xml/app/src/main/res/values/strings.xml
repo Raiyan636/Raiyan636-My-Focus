@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Rycreo Blocker</string>
+    <string name="accessibility_service_description">Rycreo Blocker needs accessibility permission to block restricted apps and help you stay focused.</string>
+</resources>
