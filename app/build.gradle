@@ -20,6 +20,15 @@ android {
         targetCompatibility JavaVersion.VERSION_17
     }
 
+    buildTypes {
+        release {
+            // Personal testing build: signed with the standard debug key so it can be installed.
+            // For long-term private distribution, replace with a private keystore kept in GitHub Secrets.
+            signingConfig signingConfigs.debug
+            minifyEnabled false
+        }
+    }
+
     kotlinOptions {
         jvmTarget = '17'
     }
