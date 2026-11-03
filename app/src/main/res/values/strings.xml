@@ -1,4 +1,6 @@
 <resources>
- <string name="app_name">Rycreo Focus</string>
- <string name="accessibility_service_label">Rycreo Focus App Blocker</string>
+    <string name="app_name">Rycreo Focus</string>
+    <string name="app_description">A personal focus timer that blocks selected apps during a study session.</string>
+    <string name="accessibility_service_label">Rycreo Focus App Blocker</string>
+    <string name="accessibility_service_description">Observes app-window changes only to block apps you selected during an active focus session. It does not retrieve screen text or window contents.</string>
 </resources>
