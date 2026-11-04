@@ -20,7 +20,7 @@ class MainActivity : Activity() {
   if (until>System.currentTimeMillis() && active.isNotEmpty()) {
    addText("BLOCKING ACTIVE",22f)
    addText("Remaining: ${((until-System.currentTimeMillis())/60000L).coerceAtLeast(1)} minutes",16f)
-   addText("Your focus session cannot be stopped before the timer ends.",14f)
+   addButton("Delete blocking session") { p.edit().remove("until").remove("active").apply(); show() }
    return
   }
   if (until!=0L || active.isNotEmpty()) p.edit().remove("until").remove("active").apply()
