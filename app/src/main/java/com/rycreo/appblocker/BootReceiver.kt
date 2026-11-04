@@ -4,9 +4,9 @@ import android.content.Context
 import android.content.Intent
 class BootReceiver : BroadcastReceiver() {
  override fun onReceive(context: Context, intent: Intent?) {
-  // Preserve an active focus session across reboot. The AccessibilityService
-  // reconnects when Android restores the user's enabled accessibility services.
-  // The original wall-clock deadline remains stored in SharedPreferences.
-  if (intent?.action != Intent.ACTION_BOOT_COMPLETED) return
+  if (intent?.action == Intent.ACTION_BOOT_COMPLETED) {
+   context.getSharedPreferences("focus", Context.MODE_PRIVATE).edit()
+    .remove("until").remove("active").apply()
+  }
  }
 }
